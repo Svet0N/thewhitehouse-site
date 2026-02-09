@@ -403,12 +403,19 @@ nav .container { display: flex; justify-content: space-between; align-items: cen
 .price-card-amount { font-size: 2.5rem; font-weight: bold; margin: 20px 0; }
 .price-card-winter .price-card-amount { color: var(--accent); }
 .price-card-summer .price-card-amount { color: #e74c3c; }
-.price-card-single { background: white; padding: 30px; margin-top: 30px; }
-.price-card-single h3 { color: #27ae60; }
+.price-card-single .price-card-amount { color: #27ae60; }
 
 .price-note { margin-bottom: 10px; }
 .price-note-tight { margin-bottom: 8px; }
 .price-note-muted { color: #666; font-size: 0.9rem; }
+
+@media (min-width: 769px) {
+    .price-card-single {
+        grid-column: 1 / -1;
+        width: 60%;
+        justify-self: center;
+    }
+}
 
 .pricing-rules-title {
     font-size: 1.6rem;
@@ -758,6 +765,7 @@ nav .container {
     .amenity-card { padding: 22px; }
     .amenity-card i { font-size: 2rem; }
     .amenities-grid .amenity-card:last-child { width: 100%; }
+    .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .price-card { padding: 28px; }
     .price-card-amount { font-size: 2rem; }
 
@@ -801,6 +809,7 @@ nav .container {
     .dist-card { width: auto; }
     .gallery-card { height: 220px; }
 
+    .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .price-card { padding: 22px; }
     .price-card-amount { font-size: 1.7rem; }
     .amenity-card { padding: 18px; }
