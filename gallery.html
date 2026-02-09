@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерия - The White House</title>
+    <link rel="icon" href="gallery/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-theme"> 
+    <nav>
+        <div class="container">
+            <a class="logo logo--split" href="index.html#home" aria-label="The White House">
+                <span class="logo-top" aria-hidden="true">The</span>
+                <span class="logo-main" aria-hidden="true">White House</span>
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="index.html#home">Начало</a></li>
+                <li><a href="index.html#about">За вилата</a></li>
+                <li><a href="index.html#amenities">Удобства</a></li>
+                <li><a href="index.html#prices">Цени</a></li>
+                <li><a href="index.html#location">Локация</a></li>
+                <li><a href="index.html#contact">Контакти</a></li>
+                <li><a href="gallery.html" class="active-link">Галерия</a></li> 
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section gallery-page-section">
+        <div class="container">
+            <h2 class="section-title">Фотогалерия</h2>
+            
+            <!-- Filters -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-category="all">Всички</button>
+                <button class="filter-btn" data-category="house">Къщата</button>
+                <button class="filter-btn" data-category="garden">Градина & Басейн</button>
+                <button class="filter-btn" data-category="fun">Забавления</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-page-grid">
+                <div class="gallery-card house">
+                    <img src="gallery/back_house.png" alt="Къща - фасада">
+                    <div class="overlay"><span>Фасада</span></div>
+                </div>
+                <div class="gallery-card garden">
+                    <img src="gallery/basein.jpg" alt="Басейн">
+                    <div class="overlay"><span>Басейн</span></div>
+                </div>
+                <div class="gallery-card garden">
+                    <img src="gallery/bbqto.jpg" alt="Барбекю">
+                    <div class="overlay"><span>Барбекю</span></div>
+                </div>
+                <div class="gallery-card house">
+                    <img src="gallery/bedroom1.jpg" alt="Спалня 1">
+                    <div class="overlay"><span>Спалня 1</span></div>
+                </div>
+                <div class="gallery-card house">
+                    <img src="gallery/bedroom2.jpg" alt="Спалня 2">
+                    <div class="overlay"><span>Спалня 2</span></div>
+                </div>
+                <div class="gallery-card house">
+                    <img src="gallery/bedroom3.jpg" alt="Спалня 3">
+                    <div class="overlay"><span>Спалня 3</span></div>
+                </div>
+                <div class="gallery-card house">
+                    <img src="gallery/bedroom4.jpg" alt="Спалня 4">
+                    <div class="overlay"><span>Спалня 4</span></div>
+                </div>
+                <div class="gallery-card house">
+                    <img src="gallery/bedroom5.jpg" alt="Спалня 5">
+                    <div class="overlay"><span>Спалня 5</span></div>
+                </div>
+                <div class="gallery-card garden">
+                    <img src="gallery/djakuzi.jpg" alt="Джакузи">
+                    <div class="overlay"><span>Джакузи</span></div>
+                </div>
+                <div class="gallery-card garden">
+                    <img src="gallery/djakuzi2.jpg" alt="Джакузи">
+                    <div class="overlay"><span>Джакузи</span></div>
+                </div>
+                <div class="gallery-card fun">
+                    <img src="gallery/fun1.jpg" alt="Забавления 1">
+                    <div class="overlay"><span>Забавления</span></div>
+                </div>
+                <div class="gallery-card fun">
+                    <img src="gallery/fun2.jpg" alt="Забавления 2">
+                    <div class="overlay"><span>Забавления</span></div>
+                </div>
+                <div class="gallery-card fun">
+                    <img src="gallery/fun3.jpg" alt="Забавления 3">
+                    <div class="overlay"><span>Забавления</span></div>
+                </div>
+                <div class="gallery-card house">
+                    <img src="gallery/golqmata_masa.jpg" alt="Голяма маса">
+                    <div class="overlay"><span>Голяма маса</span></div>
+                </div>
+                <div class="gallery-card house">
+                    <img src="gallery/house1.jpg" alt="Къща">
+                    <div class="overlay"><span>Къща</span></div>
+                </div>
+                <div class="gallery-card garden">
+                    <img src="gallery/kladenec.jpg" alt="Кладенец">
+                    <div class="overlay"><span>Кладенец</span></div>
+                </div>
+                <div class="gallery-card house">
+                    <img src="gallery/masa2.jpg" alt="Маса">
+                    <div class="overlay"><span>Маса</span></div>
+                </div>
+                <div class="gallery-card fun">
+                    <img src="gallery/pufove.jpg" alt="Зона с пуфове">
+                    <div class="overlay"><span>Зона с пуфове</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 The White House - с. Лъка. Всички права запазени.</p>
+    </footer>
+
+    <!-- Floating Contact Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <button class="chat-toggle" id="chat-toggle" aria-label="Запитвания">
+            <i class="fas fa-comment-dots" aria-hidden="true"></i>
+        </button>
+        <div class="chat-panel" id="chat-panel" aria-hidden="true">
+            <div class="chat-panel-header">
+                <h4>За запитвания свържете се с нас</h4>
+                <button class="chat-close" id="chat-close" aria-label="Затвори">×</button>
+            </div>
+            <p>За въпроси и запитвания натиснете бутончето.</p>
+            <a class="btn chat-cta" href="https://m.me/TheWhiteHouseLaka" target="_blank" rel="noopener">Пишете ни в Messenger</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
