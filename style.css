@@ -15,10 +15,29 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
     color: #333;
     line-height: 1.6;
     margin-top: 70px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 12px;
+    padding: 8px 14px;
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 20px;
+    z-index: 1200;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus-visible {
+    top: 12px;
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
 }
 
 /* === Motion === */
@@ -694,7 +713,8 @@ nav .container {
     }
 
     .nav-links.active {
-        max-height: 500px;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
     }
 
     .nav-links li {
@@ -727,7 +747,6 @@ nav .container {
 }
 
 @media (max-width: 768px) {
-    body { margin-top: 60px; }
     .section { padding: 60px 0; }
     .section-title { font-size: 2rem; }
 
@@ -747,7 +766,11 @@ nav .container {
 
     .contact-info p { min-height: auto; }
     .dist-card { padding: 12px 18px; }
-    .dist-grid { display: none; }
+    .dist-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -772,7 +795,7 @@ nav .container {
     }
 
     .dist-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
         gap: 10px;
     }
     .dist-card { width: auto; }

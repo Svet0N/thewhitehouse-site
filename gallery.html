@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Фотогалерия на вилата The White House – интериор, градина, басейн и зони за забавления.">
     <title>Галерия - The White House</title>
     <link rel="icon" href="gallery/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="light-theme"> 
-    <nav>
+    <a class="skip-link" href="#main">Пропусни към съдържанието</a>
+
+    <nav aria-label="Главна навигация">
         <div class="container">
             <a class="logo logo--split" href="index.html#home" aria-label="The White House">
                 <span class="logo-top" aria-hidden="true">The</span>
@@ -29,15 +33,16 @@
                 <li><a href="index.html#prices">Цени</a></li>
                 <li><a href="index.html#location">Локация</a></li>
                 <li><a href="index.html#contact">Контакти</a></li>
-                <li><a href="gallery.html" class="active-link">Галерия</a></li> 
+                <li><a href="gallery.html" class="active-link" aria-current="page">Галерия</a></li> 
             </ul>
         </div>
     </nav>
 
     <!-- Gallery Section -->
-    <section class="section gallery-section gallery-page-section">
+    <main id="main">
+    <section class="section gallery-section gallery-page-section" aria-labelledby="gallery-title">
         <div class="container">
-            <h2 class="section-title">Фотогалерия</h2>
+            <h1 class="section-title" id="gallery-title">Фотогалерия</h1>
             
             <!-- Filters -->
             <div class="gallery-filters">
@@ -124,6 +129,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
